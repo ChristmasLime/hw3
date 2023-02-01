@@ -131,12 +131,13 @@ public class Main {
         int b = 500;
         float lowKg = a / 1000f;
         float idealKg = b / 1000f;
-        float lowKgDay = allWeight / lowKg;
-        float idealKgDay = allWeight / idealKg;
+        double lowKgDay =(double) allWeight / lowKg;
+        double idealKgDay = (double) allWeight / idealKg;
         System.out.println(lowKgDay + " дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм.");
         System.out.println(idealKgDay + " дней уйдет на похудение, если спортсмен будет терять каждый день по 500 грамм.");
-        double medium = (lowKgDay + idealKgDay)/2;
-        System.out.println(medium + " день может потребоваться в среднем, чтобы добиться результата похудения.");
+        double medium = (lowKg+ idealKg)/2d;
+        double mediumDay = allWeight / medium;
+        System.out.printf("Среднее количество дней уйдет на похудение %.2f%n " , mediumDay);
 
     }
 
