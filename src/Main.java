@@ -65,15 +65,20 @@ public class Main {
         System.out.println("Задача 4");
          byte minutes = 2;
          int bottle = 16;
+         int oneMinutesBottle = bottle / minutes;
+
          long twentyMinutes = 20;
-         long twentyMinutesBottle = bottle * twentyMinutes / minutes;
+         long twentyMinutesBottle = oneMinutesBottle * twentyMinutes;
          System.out.println("За 20 минут машина произвела " + twentyMinutesBottle + " штук бутылок.");
+
          short day = 1440;
-         int dayBottle = bottle * day / minutes;
+         int dayBottle = oneMinutesBottle * day ;
         System.out.println("За день машина произвела " + dayBottle + " штук бутылок.");
+
          int threeDay = day * 3;
-         int threeDayBottle = dayBottle * threeDay;
+         int threeDayBottle = oneMinutesBottle * threeDay;
         System.out.println("За три дня машина произвела " + threeDayBottle + " штук бутылок.");
+
          int month = threeDay * 10;
          long monthBottle = month * dayBottle;
          System.out.println("За 20 минут машина произвела " + monthBottle + " штук бутылок.");
